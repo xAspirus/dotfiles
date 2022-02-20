@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function check_File {
+	date1=$(stat -c %y "$1")
+	while true; do
+		date2=$(stat -c %y "$1")
+		if [ "$date2" != "$date1" ]; then
+			return
+		fi
+	done
+}
+
+while true; do
+	echo " ---- "
+	python3 "$1"
+	check_File "$1"
+done
