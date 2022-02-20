@@ -1,2 +1,2 @@
 # dotfiles
-Configuration files and quick setup scripts for Linux systems I use
+Configuration files and post-install scripts for Linux systems I use
