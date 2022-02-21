@@ -13,4 +13,6 @@ dnf install -y lame\* --exclude=lame-devel
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 dnf group -y upgrade --with-optional Multimedia
 
-dnf install -y tilix micro geany gnome-tweaks gnome-extensions-app
+dnf install -y openssl
+dnf install -y tilix micro gnome-tweaks
+flatpak install flathub com.mattjakeman.ExtensionManager

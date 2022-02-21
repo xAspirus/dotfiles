@@ -8,3 +8,5 @@ done
 for i in ~/.bashrc /etc/dnf/dnf.conf ~/.bash_login; do
 	cp $i ./
 done
+
+cp -r ~/.config/micro ./

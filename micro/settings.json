@@ -1,0 +1,23 @@
+{
+    "colorcolumn": 80,
+    "colorscheme": "aspirus",
+    "cursorline": false,
+    "ft:css": {
+        "tabsize": 2
+    },
+    "ft:json": {
+        "tabsize": 2
+    },
+    "ft:nim": {
+        "tabsize": 2,
+        "tabstospaces": true
+    },
+    "ft:yaml": {
+        "tabsize": 2,
+        "tabstospaces": true
+    },
+    "ftoptions": false,
+    "indentchar": "│",
+    "linter": false,
+    "scrollmargin": 0
+}
