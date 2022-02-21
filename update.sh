@@ -4,7 +4,7 @@ for i in $(ls ~/.bin); do
 	cp ~/.bin/$i ./bin
 done
 
-for i in ~/.bashrc /etc/dnf/dnf.conf ~/.bash_login; do
+for i in ~/.bashrc /etc/dnf/dnf.conf ~/.bash_login ~/.zshrc ~/.p10k.zsh; do
 	cp $i ./
 done
 
