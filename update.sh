@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 for i in $(ls ~/.bin); do
 	cp ~/.bin/$i ./bin
@@ -10,3 +9,5 @@ for i in ~/.bashrc /etc/dnf/dnf.conf ~/.bash_login; do
 done
 
 cp -r ~/.config/micro ./
+rm -r micro/buffers
+rm -r micro/backups
