@@ -14,5 +14,5 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 dnf group -y upgrade --with-optional Multimedia
 
 dnf install -y openssl
-dnf install -y tilix micro gnome-tweaks
+dnf install -y tilix micro gnome-tweaks thefuck exa
 flatpak install flathub com.mattjakeman.ExtensionManager
