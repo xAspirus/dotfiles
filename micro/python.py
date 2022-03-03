@@ -87,3 +87,9 @@ dict()
 
 class MyClass:
 	pass
+
+# comma is blue
+, 'string' , 'string' : 2 3 4 5 2 Function() {}
+
+FunctionCall(arg1, arg2)
+FunctionCall('arg1', 'arg2')
