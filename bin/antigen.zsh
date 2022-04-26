@@ -929,9 +929,12 @@ antigen-help () {
   antigen-version
 
   cat <<EOF
+
 Antigen is a plugin management system for zsh. It makes it easy to grab awesome
 shell scripts and utilities, put up on Github.
+
 Usage: antigen <command> [args]
+
 Commands:
   apply        Must be called in the zshrc after all calls to 'antigen bundle'.
   bundle       Install and load a plugin.
@@ -949,6 +952,7 @@ Commands:
                snapshot file.
   update       Update plugins.
   use          Load a supported zsh pre-packaged framework.
+
 For further details and complete documentation, visit the project's page at
 'http://antigen.sharats.me'.
 EOF
@@ -1819,6 +1823,7 @@ _antigen_compinit () {
 }
 autoload -Uz add-zsh-hook; add-zsh-hook precmd _antigen_compinit
 compdef () {}
+
 if [[ -n "$ZSH" ]]; then
   ZSH="$ZSH"; ZSH_CACHE_DIR="$ZSH_CACHE_DIR"
 fi
@@ -1829,6 +1834,7 @@ typeset -gaU _ANTIGEN_BUNDLE_RECORD; _ANTIGEN_BUNDLE_RECORD=($(print ${(qq)_ANTI
 typeset -g _ANTIGEN_CACHE_LOADED; _ANTIGEN_CACHE_LOADED=true
 typeset -ga _ZCACHE_BUNDLE_SOURCE; _ZCACHE_BUNDLE_SOURCE=($(print ${(qq)_ZCACHE_BUNDLE_SOURCE}))
 typeset -g _ANTIGEN_CACHE_VERSION; _ANTIGEN_CACHE_VERSION='v2.2.2'
+
 #-- END ZCACHE GENERATED FILE
 EOC
 

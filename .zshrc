@@ -5,18 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+#! /usr/bin/zsh
 
-#                 ██                    
-#                ░██                    
-#  ██████  ██████░██      ██████  █████ 
-# ░░░░██  ██░░░░ ░██████ ░░██░░█ ██░░░██
-#    ██  ░░█████ ░██░░░██ ░██ ░ ░██  ░░ 
-#   ██    ░░░░░██░██  ░██ ░██   ░██   ██
-#  ██████ ██████ ░██  ░██░███   ░░█████ 
-# ░░░░░░ ░░░░░░  ░░   ░░ ░░░     ░░░░░  
 
-### Plugins
-
+### Antigen
 source ~/.bin/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle command-not-found
@@ -25,75 +17,45 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen theme romkatv/powerlevel10k
 antigen apply
 
-### Theme
-
-
 ### History
+HISTFILE=~/.history
+SAVEHIST=65536
+HISTSIZE=65536
 
-HISTFILE=~/.erhieuohte
-SAVEHIST=100
-HISTSIZE=100
 
-### Keybindings
-
+### Keybinds
 bindkey "^[[1;5D" backward-word 
 bindkey "^[[1;5C" forward-word
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
-
-# Insert "sudo " at the beginning of the line
 function prepend-sudo {
-  if [[ $BUFFER != "sudo "* ]]; then
-    BUFFER="sudo $BUFFER"; CURSOR+=5
+  if [[ $BUFFER != "doas "* ]]; then
+    BUFFER="doas $BUFFER"; CURSOR+=5
   fi
 }
 zle -N prepend-sudo
 bindkey "^K" prepend-sudo
 
-### (ArchWiki): Colored Output In Console 
 
+### (ArchWiki): Colored Output In Console 
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 
-### Aliases
 
+### Aliases
 alias ls='exa'
 alias ll='ls -l --no-permissions --no-user'
 alias la='ls -a'
 alias lla='ll -a'
 alias lt='ls -TL=3'
 alias cc='gcc -Wall'
-
+alias py='ptpython'
+alias rm='echo "Use mv ~/.trash"'
 zstyle ':completion:*' menu yes select
 path+=('/home/aspirus/.bin')
-path+=('/home/aspirus/.nimble/bin')
-export SUDO_PROMPT='[sudo] Password: '
+path+=('/home/aspirus/.local/bin')
 export EDITOR=micro
-
-# ### Prompt
-# 
-# export EXECTIME=0
-# prompt='$(prompt $PWD $? "$EXECTIME" $COLUMNS) $(echo -en "\e]2;\a")'
-# 
-# function preexec() {
-#   timer=$(($(date +%s%0N)/1000000))
-# }
-# 
-# function precmd() {
-#   if [ $timer ]; then
-#     now=$(($(date +%s%0N)/1000000))
-#     elapsed=$(($now-$timer))
-# 
-#     export EXECTIME=$elapsed
-#     unset timer
-#   fi
-# }
-
-eval $(thefuck --alias)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source /etc/profile.d/vte.sh
-
