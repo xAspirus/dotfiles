@@ -31,8 +31,8 @@ rules:
   - number: "\\b0x[0-9A-Fa-f]+\\b"             # 0xdeadbeef
   - number: "\\b[0-9]+e-?[0-9]+\\b"            # 3.14e-10
   
-  - comment: "\\.{3}"
-  - comment: "\\>{3}"
+  - function: "\\.{3}"
+  - function: "\\>{3}"
 
   # 'string'
   - string:

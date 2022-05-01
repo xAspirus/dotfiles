@@ -2,6 +2,7 @@
     "colorcolumn": 80,
     "colorscheme": "awesome",
     "cursorline": false,
+    "fileformat": "dos",
     "ft:css": {
         "tabsize": 2
     },
@@ -20,5 +21,5 @@
     "indentchar": "│",
     "infobar": false,
     "linter": false,
-    "scrollmargin": 0
+    "scrollmargin": 10
 }
