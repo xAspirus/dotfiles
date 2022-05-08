@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+export QT_QPA_PLATFORMTHEME=kde
+export XDG_CURRENT_DESKOP=KDE

@@ -1,0 +1,20 @@
+{
+	"workbench.startupEditor": "none",
+	"workbench.statusBar.visible": false,
+	"workbench.activityBar.visible": false,
+	"window.menuBarVisibility": "toggle",
+	"workbench.colorTheme": "Gruvbox Material Dark",
+	"editor.insertSpaces": false,
+	"[html]": {
+		"editor.tabSize": 2
+	},
+	"[css]": {
+		"editor.tabSize": 2
+	},
+	"editor.fontFamily": "JetBrains Mono",
+	"window.zoomLevel": -1,
+	"editor.minimap.enabled": false,
+	"editor.rulers": [
+		100
+	]
+}

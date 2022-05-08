@@ -1,0 +1,14 @@
+MkFolders:
+  ~/.config
+  ~/.config/VSCodium/User
+
+Folders:
+  ~/.config/micro
+  ~/.config/sxhkd
+  ~/.config/bspwm
+  ~/.config/rofi
+
+Files:
+  ~/.zshrc
+  ~/.zshenv
+  ~/.config/VSCodium/User/settings.json
