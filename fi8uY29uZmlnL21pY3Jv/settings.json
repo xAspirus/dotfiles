@@ -1,6 +1,6 @@
 {
-    "colorscheme": "awesome",
-    "cursorline": false,
+    "colorscheme": "cool-micro",
+    "diffgutter": true,
     "ft:css": {
         "tabsize": 2
     },
@@ -20,7 +20,9 @@
     },
     "ftoptions": false,
     "indentchar": "│",
-    "infobar": false,
     "linter": false,
-    "scrollmargin": 10
+    "scrollmargin": 0,
+    "statusformatl": "",
+    "statusformatr": "$(opt:filetype) : $(filename)",
+    "tabstospaces": true
 }

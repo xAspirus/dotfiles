@@ -42,8 +42,9 @@ super + g
 # state/flags
 #
 
+# screenshot
 super + s
-	spectacle -bcr
+	maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png -i
 
 # set the window state
 super + {t,shift + t,d,f}
@@ -122,3 +123,15 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+super + r
+	bspc node -f @parent | bspc node -R 90
+
+XF86AudioRaiseVolume
+	pulsemixer --change-volume +10
+
+XF86AudioLowerVolume
+	pulsemixer --change-volume -10
+
+XF86AudioMute
+	pulsemixer --toggle-mute

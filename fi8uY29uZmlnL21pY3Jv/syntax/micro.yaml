@@ -1,0 +1,32 @@
+filetype: "micro"
+
+detect:
+  filename: "\\.micro$"
+
+rules:
+  - keyword: "color-link"
+
+  - black:   "black"
+  - red:     "red"
+  - blue:    "blue"
+  - green:   "green"
+  - yellow:  "yellow"
+  - cyan:    "cyan"
+  - magenta: "magenta"
+  - green:   "green"
+  - white:   "white"
+
+  - brightblack:   "brightblack"
+  - brightred:     "brightred"
+  - brightblue:    "brightblue"
+  - brightgreen:   "brightgreen"
+  - brightyellow:  "brightyellow"
+  - brightcyan:    "brightcyan"
+  - brightmagenta: "brightmagenta"
+  - brightgreen:   "brightgreen"
+  - brightwhite:   "brightwhite"
+
+  - comment:
+      start: "#"
+      end: "$"
+      rules: []

@@ -10,7 +10,6 @@ def sh(command: str) -> str:
 	return sp.check_output(['sh', '-c', command]).decode('UTF-8')
 
 
-
 def load_config(config_path: str) -> tuple[list[str], list[str]]:
 	with open(config_path, 'r') as fp:
 		file = fp.read()
@@ -35,21 +34,21 @@ def load_config(config_path: str) -> tuple[list[str], list[str]]:
 @click.option('--update/--no-update', default=False, type=bool, help='Copy files into repository instead of installing dotfiles.')
 def main(update):
 	files, folders, mkfolders = load_config('files.txt')
-
+	
 	for folder in mkfolders:
 		sh(f'mkdir -p {folder}')
-
+	
 	for file in files:
 		file_hashed = base64.b64encode(file.encode('ascii'), altchars=b'_-').decode('ascii')
-
+		
 		if update:
 			sh(f'cp -r {file} {file_hashed}')
 		else:
 			sh(f'cp -r {file_hashed} {file}')
-
+	
 	for file in folders:
 		file_hashed = base64.b64encode(file.encode('ascii'), altchars=b'_-').decode('ascii')
-
+		
 		if update:
 			try:
 				sh(f'cp -rf {file}/. {file_hashed}/.')

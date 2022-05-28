@@ -1,0 +1,19 @@
+filetype: "ini"
+
+detect:
+  filename: "\\.ini$"
+
+rules:
+  - number: "\\b[0-9.]+\\b"
+  - keyword: "^\\[.*\\]$"
+  - function: ".*\\s?=\\s?"
+  - symbol: "[=]"
+  - string:
+      start: "\""
+      end: "\""
+      rules: []
+
+  - comment:
+      start: ";"
+      end: "$"
+      rules: []

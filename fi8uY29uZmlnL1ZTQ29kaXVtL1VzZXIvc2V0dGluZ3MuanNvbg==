@@ -1,20 +1,34 @@
 {
-	"workbench.startupEditor": "none",
-	"workbench.statusBar.visible": false,
-	"workbench.activityBar.visible": false,
-	"window.menuBarVisibility": "toggle",
-	"workbench.colorTheme": "Gruvbox Material Dark",
-	"editor.insertSpaces": false,
-	"[html]": {
-		"editor.tabSize": 2
-	},
-	"[css]": {
-		"editor.tabSize": 2
-	},
-	"editor.fontFamily": "JetBrains Mono",
-	"window.zoomLevel": -1,
-	"editor.minimap.enabled": false,
-	"editor.rulers": [
-		100
-	]
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.visible": false,
+    "window.menuBarVisibility": "toggle",
+    "editor.tabSize": 4,
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[css]": {
+        "editor.tabSize": 2
+    },
+    "editor.fontFamily": "Inconsolata",
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        100
+    ],
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "punctuation.definition.comment",
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "files.insertFinalNewline": true,
+    "python.formatting.provider": "black"
 }
