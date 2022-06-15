@@ -12,20 +12,23 @@
 }
 
 window {
-	anchor:     south;
-	location:   south;
-	width:      100%;
+	anchor:     southwest;
+	location:   southwest;
+	width:      25%;
+	height:     869px;
 	padding:    0px;
 	children:   [ horibox ];
+	border-color: @red;
+	border: 1px;
 }
 
 horibox {
-	orientation: horizontal;
+	orientation: vertical;
 	children:   [ entry, listview ];
 }
 
 listview {
-	layout:     horizontal;
+	layout:     vertical;
 	spacing:    5px;
 	lines:      100;
 }
@@ -33,7 +36,7 @@ listview {
 entry {
 	expand:     false;
 	width:      10em;
-	padding: 8px 8px;
+	padding: 6px 6px;
 }
 
 prompt {

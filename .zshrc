@@ -53,7 +53,7 @@ alias lla='ll -a'
 alias lt='ls -TL=3'
 alias cc='gcc -Wall'
 alias py='ptpython'
-alias rm='trash'
+#alias rm='trash'
 alias git_add_all_commit_push='git add . && git commit -m e && git push'
 #alias rm='echo "Use mv ~/.trash"'
 zstyle ':completion:*' menu yes select
@@ -66,3 +66,6 @@ export MICRO_TRUECOLOR=1
 alias pbay='python3 /home/aspirus/Projects/pbay/pbay'
 alias spkg='python3 /home/aspirus/Projects/SPM/spm'
 alias ytdl='python3 /home/aspirus/Projects/youtube-dl-sync/youtube-dl-sync'
+
+
+alias wifi-connect='iwctl station wlan0 connect'
